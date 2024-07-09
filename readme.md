@@ -1,6 +1,6 @@
 # Research Lists in LLM
 
-### Widely used open-sourced LLM  
+## Widely used open-sourced LLM  
 
 
 **LLM with the longest context: XVERSE-13B-256K**  
@@ -19,7 +19,7 @@
 An efficient training framework mentioned, support training in parallel.   
 
 
-### works of fine-tuning model  
+## works of fine-tuning model  
 
 **Evaluating Large Language Models Trained on Code (function synthesis on coding tasks)**  
 **Github:** https://github.com/openai/human-eval  
@@ -36,12 +36,12 @@ An efficient training framework mentioned, support training in parallel.
 **Github:** https://github.com/tatsu-lab/stanford_alpaca  
 
 
-### works of pretrain  
+## works of pretrain  
 
 **LLama 65B**  
 **Websotes:** https://baijiahao.baidu.com/s?id=1771756789663508724&wfr=spider&for=pc   
 
-### prompt engineering  
+## prompt engineering  
 
 **PAL: Program-aided Language Models**  
 
@@ -60,13 +60,13 @@ using Gurobi
 
 
 
-### Tools  
+## Tools  
 
 **Token estimization:** https://toolai.fun/  
 
 **Langchain:** https://www.163.com/dy/article/IJ4O5FRG0531FIPF.html  
 
-### Some heuristic issues  
+## Some heuristic issues  
 
 **Difference between GPT & Claude:** https://blog.csdn.net/u011537073/article/details/133950059  
 
