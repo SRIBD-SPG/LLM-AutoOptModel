@@ -35,6 +35,8 @@ An efficient training framework mentioned, support training in parallel.
 **Stanford Alpaca: An Instruction-following LLaMA Model**  
 **Github:** https://github.com/tatsu-lab/stanford_alpaca  
 
+**LLaMoCo: Instruction Tuning of Large Language Models for Optimization Code Generation**
+
 
 ## works of pretrain  
 
@@ -54,8 +56,29 @@ Declarative prompt
 **OPTIMUS: OPTIMIZATION MODELING USING MIP SOLVERS AND LARGE LANGUAGE MODELS (Stanford University)**  
 Including code generation  
 
-**Diagnosing Infeasible Optimization Problems Using Large Language Models (Purdue University)**  
-using Gurobi  
+**Diagnosing Infeasible Optimization Problems Using Large Language Models (Purdue University)**    
+using Gurobi   
+
+**Solving Math Word Problems by Combining Language Models With Symbolic Solvers**  
+
+**LLM-Resistant Math Word Problem Generation via Adversarial Attacks**  
+
+**DESIGN OF CHAIN-OF-THOUGHT IN MATH PROBLEMSOLVING**  
+
+**FILL IN THE BLANK: EXPLORING AND ENHANCING LLM CAPABILITIES FOR BACKWARD REASONING INMATH WORD PROBLEMS**  
+
+**OptiMUS: Scalable Optimization Modeling with (MI)LP Solvers and Large Language Models**  
+
+**CHAIN-OF-EXPERTS: WHEN LLMS MEET COMPLEXOPERATIONS RESEARCH PROBLEMS**  
+
+## RAG  
+
+**From Local to Global: A Graph RAG Approach to query-focused summarization (Microsoft)**  
+
+**FoRAG: Factuality-optimized Retrieval Augmented Generation for Web-enhanced Long-form Question Answering**  
+
+**FlashRAG: A Modular Toolkit for Efficient Retrieval-Augmented Generation Research**  
+
 
 
 
