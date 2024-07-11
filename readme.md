@@ -12,6 +12,9 @@
 - **Google Gemini (mainly multimodal model? Perform poorly in AM)**  
 **paper:** Gemini:A Family of Highly Capable Multimodal Models (Google deepmind)    
 
+- **Falcon**
+**Website:** https://huggingface.co/blog/falcon
+
 - **LLama 1/2/3**  
 **paper:** LLaMA: Open and Efficient Foundation Language Models (Meta AI)  
 
