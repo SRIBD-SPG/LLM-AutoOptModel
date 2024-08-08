@@ -99,5 +99,57 @@ using Gurobi
 - **Construct LLM:** https://zhuanlan.zhihu.com/p/664046612?utm_psn=1702755988845731840    
 
 
+## LLM related to optimization problem summary (with detailed information)
+
+- **ORLM: Training Large Language Models for Optimization Modeling**
+Motivation: heavily rely on prompt engineering (regard multi-agent cooperation as prompt similarly), causing privacy concerns. Based on this, author proposes to train the open-source LLMs for optimization modeling.
+#### Introduction
+The top-3 lines indicate some prior works on automating optimization modeling.
+Page 2: Previous research has focused on ... reference paper
+pretrained-LMs result in accumulated errors and have limited generalization capabilities (because of relatively-small parameter scale)
+OptiGuide: Large Language Models for Supply Chain Optimization
+Former algorithms rely heavily on sensitive data? Is that true?
+
+Strongly data requirements
+
+There exist multiple modeling techniques for the same problem, including these in the dataset would enable the model to learn various modeling skills. How to train LLM with different output?
+
+Using seed data to generate more data.
+
+Employ COPT [Cardinal Optimizer (COPT) user guide. https://guide.coap.online/copt/en-doc] as the default program solver.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
