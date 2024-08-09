@@ -176,7 +176,8 @@ traning corpus + pretrain + finetune (use llama-2)
 - Employ **hash-based methods** to de-duplicate the data.
 
 
-
+##### Domain instruction data generation
+- ocean science corpus contains multiple fields and topics, and each topic has its unique data characteristics and patterns.
 
 
 
