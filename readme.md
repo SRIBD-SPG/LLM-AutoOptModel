@@ -99,7 +99,7 @@ using Gurobi
 - **Construct LLM:** https://zhuanlan.zhihu.com/p/664046612?utm_psn=1702755988845731840    
 
 
-## LLM related to optimization problem summary (with detailed information)
+## LLM summary related to optimization problem (with detailed information)
 
 ### - **ORLM: Training Large Language Models for Optimization Modeling**
 Motivation: heavily rely on prompt engineering (regard multi-agent cooperation as prompt similarly), causing privacy concerns. Based on this, author proposes to train the open-source LLMs for optimization modeling.
@@ -135,18 +135,45 @@ Section 3.2: Instructing GPT-4 to rewrite the OR problem, either simplifying or 
 section 3.3: Filtering: 1. Remove examples where questions duplicate each other or match questions in the evaluation benchmarks.
                         2. Manually correct minor grammatical errors (maybe caused by the unfamiliarity of GPT-4 with the COPT API).
 
+Experiments:
+
+Using stanford-alpaca-like template as the input prompt.
+Only compute the loss over the target completion.
+Greedy decoding under 0-shot setting to eliminate randomness, selecting the top-1 completion as the final solution.
+Converting the mathematical problems into executable programs using GPT-4, and use these as ground truth.
+
+Dataset: 1. NL4OPT: NL4Opt Competition: Formulating Optimization Problems Based on Their Natural Language Descriptions
+         2. MAMO: Mamo: a mathematical modeling benchmark with solvers
+         3. IndustryOR: This paper.
+
+The performance can be measured using execution accuracy, where an executed optimal value that matches any provided GT optimal value is considered correct.
+
+A reference: Reflexion: Reflexion: an autonomous agent with dynamic memory and self-reflection
+
+#### Code remains to be tested
 
 
+### - **OceanGPT: A large language model for ocean science tasks**
+Motivation: The potential of LLMs for ocean science is under-explored.
+The difficulty is mainly on the immense and intricate nature of ocean data as well as the richness in knowledge.
 
+Contribution abstract: Propose DoInstruct, a novel framework to automatically obtain a large volume of ocean domain instruction data, which generates instructions based on **multi-agent collaboration**.
+To sum up, the main hurdle is the data and the specific knowledge.
 
+Introduction: Agents are assigned with different role in a specific domain (science and research, resources and development, ecology and environment) and responsible forgenerating the corresponding data.
 
+**Related work, Science large language models,** a number of works in various domains are listed.
 
+#### Method:
 
+traning corpus + pretrain + finetune (use llama-2)
 
-
-
-
-
+##### Pretrain
+- Collect 67633 documents from **open-access literature** (hahahah authors emphasis this in paper).
+- For diversity, authors choose articles from different sources to ensure coverage of various research perspectives and methods.
+- For pdf transformation, employ pdfminer to convert the content of literature files into plain text.
+- Apply regular expressions to filter out figures, tables, headers, footers, page numbers, URLs and references. Additionally remove extra spaces, line breaks and non-text characters.
+- Employ **hash-based methods** to de-duplicate the data.
 
 
 
