@@ -101,7 +101,7 @@ using Gurobi
 
 ## LLM related to optimization problem summary (with detailed information)
 
-- **ORLM: Training Large Language Models for Optimization Modeling**
+### - **ORLM: Training Large Language Models for Optimization Modeling**
 Motivation: heavily rely on prompt engineering (regard multi-agent cooperation as prompt similarly), causing privacy concerns. Based on this, author proposes to train the open-source LLMs for optimization modeling.
 #### Introduction
 The top-3 lines indicate some prior works on automating optimization modeling.
@@ -116,12 +116,24 @@ There exist multiple modeling techniques for the same problem, including these i
 
 Using seed data to generate more data.
 
+#### Background and Desiderata
 Employ COPT [Cardinal Optimizer (COPT) user guide. https://guide.coap.online/copt/en-doc] as the default program solver.
 
 
+Different scenarios, Different problem types, Different difficuilty levels.
+One would expect diversity at the problem-solution level? How to achieve this?
+The constructed dataset itself should contain linguistic diversity.
 
+Multiple modeling techniques, such as linearizing nonlinear problem by introducing auxiliary variables. Including this variety in the dataset allows the model to learn diffenrent modeling techniques and approaches.
 
+A referenct paper in 3.1: A synthesis method: Self-instruct: Aligning language models with self-generated instructions. It is aimed at expanding tasks.
 
+Expanding scenarios partially addresses comprehensive coverage issue in terms of scenerios and question types? (Why claiming this?) It falls short in varying levels of difficulty (manually reviewing the difficulty).
+
+Section 3.2: Instructing GPT-4 to rewrite the OR problem, either simplifying or complicating it. The aim of this process is to ensure the core logic aligns with the solution.
+
+section 3.3: Filtering: 1. Remove examples where questions duplicate each other or match questions in the evaluation benchmarks.
+                        2. Manually correct minor grammatical errors (maybe caused by the unfamiliarity of GPT-4 with the COPT API).
 
 
 
