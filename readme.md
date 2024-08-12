@@ -83,6 +83,31 @@ using Gurobi
 - **FlashRAG: A Modular Toolkit for Efficient Retrieval-Augmented Generation Research**  
 
 
+## Sth interesting
+Self-rewarding/Meta-rewarding or RLHF?
+
+#### Self-rewarding
+Intuition: 1. Training with human preferences may then be bottlenecked by human performance level. 2. separate frozen reward models cannot learn to improve during LLM training. 
+Summary results: During iterative DPO training, instruction following ability improve, LLMs also gain the ability to provide high-quality rewwards to itself. Fine-tune LLama2-70B outperforms claude2, Gemini-pro and GPT4-0613.
+Introduction: A recent alternative is to avoid training the reward model at all but directly use human preferences to train the LLM, as DPO (direct preference optimization). But in both cases, the approach is bottlenecked by the size and quality of the human preference data and reward model as well. Pretraining and multitasking training of instruction following tasks allow task transfer by training on many tasks at once.
+
+Introduction experiments: Start with LLama2 70B fine-tuned on Open assistant and then perform the training scheme in Fig.1 (I'm curious about the generated responses, each response y_i is an entire response or just one token is not clearly clarified).
+
+Methodology: Formulating the evaluation of responses as an instruction following task. 
+
+2.2: Generate N diverse candidate responses {y_i_1,...,y_i_N} for the given prompt x_i from our model using sampling. (I have a quesion, how much differences are there between y_i_1,...y_i_N? By using temperature, I think there won't be so much variants)
+
+The core issue is as following:
+M0 : Base pretrained LLM with no fine-tuning.
+M1 : Initialized with M0, then fine-tuned on the IFT+EFT seed data using SFT.
+M2 : Initialized with M1, then trained with AIFT(M1) data using DPO.
+M3 : Initialized with M2, then trained with AIFT(M2) data using DPO.
+
+This process is the same as Pairwise Cringe Optimization and Iterrative DPO [ Some things are more cringe than others: Preference optimization with the pairwise cringe loss]. However, an external fixed reward model was used in that work.
+
+
+
+
 
 
 
@@ -184,7 +209,7 @@ traning corpus + pretrain + finetune (use llama-2)
 
 
 #### Implementation details
-- For pretrain, use six A800 GPU for 7 days training.
+- For pretrain, use six A800 GPU for 7 days training (llama2B version).
 - For evaluation, LLMs are sensitive to the position of responses, so alleviating the position bias is very important.
 
 
