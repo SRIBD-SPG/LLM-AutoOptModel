@@ -103,10 +103,12 @@ M1 : Initialized with M0, then fine-tuned on the IFT+EFT seed data using SFT.
 M2 : Initialized with M1, then trained with AIFT(M1) data using DPO.
 M3 : Initialized with M2, then trained with AIFT(M2) data using DPO.
 
-This process is the same as Pairwise Cringe Optimization and Iterrative DPO [ Some things are more cringe than others: Preference optimization with the pairwise cringe loss]. However, an external fixed reward model was used in that work.
+This process is the same as Pairwise Cringe Optimization and Iterrative DPO [Some things are more cringe than others: Preference optimization with the pairwise cringe loss]. However, an external fixed reward model was used in that work.
 
+Further discussion: 1. Self-rewarding models can substantially improve the win rate in most categories, but there are some tasks for which this approach **does not improve**, such as **mathematics** and **logical reasoning**. Indicating that the current version of self-rewarding **mainly allows the models to better utilize their existing knowledge**. 2. Model's win rate increases on almost all tasks of different complexity, and especially on **slightly more difficult tasks**. 3. Also show a steady increase on **tasks with instructions with different expected response length**.
 
-
+Appendix A.1
+Authors plot the distribution of instructions for IFT, EFT and AIFT(M_1) data. It is clear that the IFT data and EFT data come from very different distributions while the IFT and AIFT(M_1) data come from similar distributions. **We find good overlap between the IFT and AIFT(M1) examples, which is desired, while the EFT examples lie in a different part of the embedding space, which can help explain why they would not affect IFT performance.**
 
 
 
