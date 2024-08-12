@@ -178,14 +178,22 @@ traning corpus + pretrain + finetune (use llama-2)
 
 ##### Domain instruction data generation
 - ocean science corpus contains multiple fields and topics, and each topic has its unique data characteristics and patterns.
+- propose a domain instruction generation framework to obtain ocean instructions _H_ using multi-agent collaboration. Each agent (expert) is responsible for generating the corresponding **data**?
+- divide five main topics in ocean field.
+- authors fine-tune the gpt-3.5-turbo model to achive the literature extractor (it can automatically extract instructions from unannotated ocean science corpus).
+
+
+#### Implementation details
+- For pretrain, use six A800 GPU for 7 days training.
+- For evaluation, LLMs are sensitive to the position of responses, so alleviating the position bias is very important.
 
 
 
 
+### OptiMUS: Scalable Optimization Modeling with (MI)LP Solvers and Large Language Models
 
-
-
-
+#### Introduction
+- Obtain some reference papers: Important applications of optimization include reducing energy costs in smart grids, improving supply chains, and increasing profits in algorithmic trading.
 
 
 
