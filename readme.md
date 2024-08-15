@@ -147,7 +147,7 @@ The top-3 lines indicate some prior works on automating optimization modeling.
 Page 2: Previous research has focused on ... reference paper
 pretrained-LMs result in accumulated errors and have limited generalization capabilities (because of relatively-small parameter scale)
 OptiGuide: Large Language Models for Supply Chain Optimization
-Former algorithms rely heavily on sensitive data? Is that true?
+
 
 Strongly data requirements
 
