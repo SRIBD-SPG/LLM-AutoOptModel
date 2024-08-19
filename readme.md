@@ -133,6 +133,8 @@ The author's key insight is to leverage an analytival mapping from reward functi
 
 - **PDF extractor:** light version without model: PyMuPDF, PyPDF2, pdfminer.
 
+- **Training:** litgpt
+
 ## Some heuristic issues  
 
 - **Difference between GPT & Claude:** https://blog.csdn.net/u011537073/article/details/133950059  
