@@ -129,7 +129,9 @@ The author's key insight is to leverage an analytival mapping from reward functi
 
 - **Token estimization:** https://toolai.fun/  
 
-- **Langchain:** https://www.163.com/dy/article/IJ4O5FRG0531FIPF.html  
+- **Langchain:** https://www.163.com/dy/article/IJ4O5FRG0531FIPF.html
+
+- **PDF extractor:** light version without model: PyMuPDF, PyPDF2, pdfminer.
 
 ## Some heuristic issues  
 
