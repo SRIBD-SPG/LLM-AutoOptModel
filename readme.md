@@ -133,7 +133,7 @@ The author's key insight is to leverage an analytival mapping from reward functi
 
 - **PDF extractor:** light version without model: PyMuPDF, PyPDF2, pdfminer.
 
-- **Training:** litgpt
+- **Training:** litgpt --S https://github.com/Lightning-AI/litgpt
 
 ## Some heuristic issues  
 
